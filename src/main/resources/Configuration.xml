@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<typeAliases>
+</typeAliases>
+    <environments default="development">
+    <environment id="development">
+        <transactionManager type="JDBC"/>
+        <dataSource type="POOLED">
+            <property name="driver" value="com.mysql.jdbc.Driver"/>
+            <property name="url" value="jdbc:mysql:/xxx:3306/xxx?useUnicode=true&amp;characterEncoding=utf-8" />
+            <property name="username" value="root"/>
+            <property name="password" value="root"/>
+            <!-- 如果数据源的defaultAutoCommit设置为True了，那么方法中如果自己捕获了异常，事务是不会回滚的，如果没有自己捕获异常则事务会回滚 -->
+            <!--<property name="defaultAutoCommit" value="true"/>-->
+        </dataSource>
+    </environment>
+</environments>
+
+<mappers>
+    <mapper resource="com/dazong/www/mapper/*.xml"/>
+</mappers>
+</configuration>

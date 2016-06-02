@@ -1,0 +1,1 @@
+JavaKafkaWordCount 参数：172.16.10.214:2181 a trademonitor 2,运行时更改资源组名称重新消费数据，运行时修改代码中的jar包路径
